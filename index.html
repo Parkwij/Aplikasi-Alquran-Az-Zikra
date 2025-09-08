@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Az-Zikra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="IMG_2331.jpeg" alt="Logo Az-Zikra" class="splash-logo">
+    <h1 class="splash-title">Az-Zikra</h1>
+    <p class="splash-subtitle">Al-Qur'an • Asmaul Husna • Doa Harian • Jadwal Sholat</p>
+  </div>
+
+  <!-- Konten Utama -->
+  <div id="mainContent" style="display:none;">
+    <header>
+      <img src="IMG_2331.jpeg" alt="Logo Az-Zikra" class="logo">
+      <h1>Az-Zikra</h1>
+    </header>
+
+    <!-- Navigasi Tab -->
+    <nav>
+      <button onclick="showSection('quran')">Al-Qur'an</button>
+      <button onclick="showSection('asmaulhusna')">Asmaul Husna</button>
+      <button onclick="showSection('doa')">Doa Harian</button>
+      <button onclick="showSection('quotes')">Quotes Islami</button>
+      <button onclick="showSection('jadwal')">Jadwal Sholat</button>
+    </nav>
+
+    <!-- Al-Qur'an -->
+    <section id="quran" class="content">
+      <h2>Al-Qur'an</h2>
+      <select id="surahSelect"></select>
+      <div id="ayatContainer"></div>
+    </section>
+
+    <!-- Asmaul Husna -->
+    <section id="asmaulhusna" class="content" style="display:none">
+      <h2>Asmaul Husna</h2>
+      <div id="asmaulContainer"></div>
+    </section>
+
+    <!-- Doa Harian -->
+    <section id="doa" class="content" style="display:none">
+      <h2>Doa Harian</h2>
+      <div id="doaContainer"></div>
+    </section>
+
+    <!-- Quotes Islami -->
+    <section id="quotes" class="content" style="display:none">
+      <h2>Quotes Islami</h2>
+      <div id="quotesContainer"></div>
+    </section>
+
+    <!-- Jadwal Sholat -->
+    <section id="jadwal" class="content" style="display:none">
+      <h2>Jadwal Sholat Kota Tangerang</h2>
+      <div id="jadwalContainer"></div>
+    </section>
+
+    <footer>
+      <p>© 2025 Az-Zikra</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Splash screen durasi 3 detik
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }, 3000);
+  </script>
+</body>
+</html>
